@@ -206,6 +206,6 @@ O objetivo deste projeto é praticar os seguintes conceitos:
 
 ## Autor
 
-Desenvolvido por **SEU NOME**.
+Desenvolvido por Heloisa Bolognesi.
 
 Projeto desenvolvido para fins acadêmicos.
