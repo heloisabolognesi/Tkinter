@@ -1,200 +1,211 @@
-TaskManager Simples
+# TaskManager
 
-Aplicação desktop de tarefas e agendamentos desenvolvida em Python com Tkinter.
+Sistema desktop para gerenciamento de tarefas e agendamentos desenvolvido em Python utilizando a biblioteca Tkinter.
 
-Este projeto foi criado para praticar os principais componentes de uma interface gráfica em Python.
+O projeto foi criado como atividade prática para aplicar conceitos de programação, interfaces gráficas, funções, eventos e manipulação de dados.
 
-Funcionalidades
+---
 
-Tarefas
+## Sobre o projeto
 
-•
-Cadastrar novas tarefas;
+O TaskManager permite que o usuário cadastre tarefas, defina prioridades, acompanhe o status das atividades e registre compromissos na agenda.
 
-•
-Informar título, descrição, responsável, data e horário;
+A aplicação possui uma interface simples, organizada e fácil de utilizar.
 
-•
-Definir prioridade: Alta, Média ou Baixa;
+---
 
-•
-Definir status: Pendente, Em andamento ou Concluída;
+## Funcionalidades
 
-•
-Visualizar tarefas em uma tabela;
+### Gerenciamento de tarefas
 
-•
-Marcar uma tarefa como concluída;
+- Cadastro de novas tarefas;
+- Definição de título;
+- Cadastro de descrição;
+- Informações sobre o responsável;
+- Definição de prioridade;
+- Cadastro de data e horário;
+- Seleção de status;
+- Visualização das tarefas em uma tabela;
+- Marcação de tarefas como concluídas;
+- Exclusão de tarefas;
+- Contadores automáticos no Dashboard.
 
-•
-Excluir tarefas;
+### Sistema de agenda
 
-•
-Exibir contadores no Dashboard.
+- Cadastro de compromissos;
+- Registro de título;
+- Cadastro de data;
+- Cadastro de horário;
+- Registro do local;
+- Visualização dos próximos agendamentos.
 
-Agenda
+### Validações
 
-•
-Cadastrar compromissos;
+O sistema realiza validações básicas antes de salvar os dados:
 
-•
-Informar título, data, horário e local;
+- O título da tarefa é obrigatório;
+- A data da tarefa é obrigatória;
+- O horário da tarefa é obrigatório;
+- O título do compromisso é obrigatório.
 
-•
-Visualizar os próximos agendamentos.
+As mensagens de aviso são exibidas utilizando `messagebox`.
 
-Componentes do Tkinter utilizados
+---
 
-•
-Tk — janela principal;
+## Tecnologias utilizadas
 
-•
-Label — textos e títulos;
+- Python 3;
+- Tkinter;
+- ttk;
+- Programação orientada a objetos;
+- Listas e dicionários;
+- Eventos e funções;
+- Interface gráfica desktop.
 
-•
-Entry — campos de texto curtos;
+---
 
-•
-Text — campo de descrição;
+## Componentes Tkinter utilizados
 
-•
-Button — botões e ações;
+Durante o desenvolvimento foram utilizados os seguintes componentes:
 
-•
-Frame — organização da interface;
+| Componente | Utilização |
+|---|---|
+| `Tk` | Criação da janela principal |
+| `Label` | Exibição de textos e títulos |
+| `Entry` | Entrada de informações curtas |
+| `Text` | Campo para descrição |
+| `Button` | Execução de ações |
+| `Frame` | Organização dos elementos |
+| `Combobox` | Seleção de prioridade e status |
+| `Treeview` | Exibição das tarefas em formato de tabela |
+| `messagebox` | Avisos e mensagens ao usuário |
 
-•
-Combobox — seleção de prioridade e status;
+---
 
-•
-Treeview — tabela de tarefas;
+## Requisitos
 
-•
-messagebox — mensagens de aviso e confirmação.
+Para executar o projeto, é necessário ter instalado:
 
-Requisitos
+- Python 3.9 ou superior;
+- Tkinter.
 
-•
-Python 3.9 ou superior;
+No Ubuntu ou Debian, instale o Tkinter com o comando:
 
-•
-Tkinter instalado.
-
-No Ubuntu ou Debian, instale o Tkinter com:
-
-Bash
-
-
+```bash
 sudo apt install python3-tk
+```
 
+No Windows, o Tkinter normalmente já é instalado junto com o Python.
 
+---
 
-No Windows, o Tkinter normalmente já vem instalado junto com o Python.
+## Como executar o projeto
 
-Como executar
+1. Clone este repositório:
 
-Abra o terminal na pasta do projeto e execute:
+```bash
+git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+```
 
-Bash
+2. Acesse a pasta do projeto:
 
+```bash
+cd TaskManager
+```
 
-python3 main_simples.py
+3. Execute o programa:
 
-
-
-No Windows, também pode ser utilizado:
-
-Bash
-
-
+```bash
 python main_simples.py
+```
 
+No Linux, também pode ser necessário utilizar:
 
+```bash
+python3 main_simples.py
+```
 
-Estrutura do projeto
+---
 
-Plain Text
+## Estrutura do projeto
 
-
+```text
 TaskManager/
+│
 ├── main_simples.py
 ├── main.py
 ├── tarefas.json
 └── README.md
+```
 
+### Arquivos principais
 
+- `main_simples.py`: versão simplificada da aplicação;
+- `main.py`: versão mais completa do sistema;
+- `tarefas.json`: arquivo utilizado para armazenar os dados na versão completa;
+- `README.md`: documentação do projeto.
 
-O arquivo recomendado para esta versão simples é o main_simples.py.
+---
 
-Como usar
+## Como utilizar
 
-1.
-Execute o arquivo main_simples.py;
+1. Execute o arquivo `main_simples.py`;
+2. Acesse a opção **Tarefas** no menu lateral;
+3. Clique no botão **Nova tarefa**;
+4. Preencha os dados solicitados;
+5. Clique em **Salvar tarefa**;
+6. Selecione uma tarefa na tabela;
+7. Utilize os botões **Concluir** ou **Excluir**;
+8. Acesse a opção **Agenda** para cadastrar compromissos.
 
-2.
-Na tela inicial, consulte os contadores e as tarefas cadastradas;
+---
 
-3.
-Acesse Tarefas no menu lateral;
+## Dashboard
 
-4.
-Clique em Nova tarefa;
+O Dashboard apresenta automaticamente:
 
-5.
-Preencha os campos obrigatórios;
+- Quantidade total de tarefas;
+- Quantidade de tarefas pendentes;
+- Quantidade de tarefas concluídas;
+- Lista das tarefas cadastradas.
 
-6.
-Clique em Salvar tarefa;
+---
 
-7.
-Selecione uma tarefa na tabela para concluí-la ou excluí-la;
+## Observação
 
-8.
-Acesse Agenda para cadastrar compromissos.
+A versão `main_simples.py` armazena os dados apenas enquanto o programa está aberto.
 
-Validações
+Ao fechar o programa, as informações cadastradas são apagadas.
 
-O programa não permite salvar:
+A versão mais completa, presente no arquivo `main.py`, possui recursos adicionais, como:
 
-•
-Uma tarefa sem título;
+- Salvamento em arquivo JSON;
+- Filtros;
+- Pesquisa de tarefas;
+- Edição de tarefas;
+- Dashboard mais completo;
+- Organização visual aprimorada.
 
-•
-Uma tarefa sem data;
+---
 
-•
-Uma tarefa sem horário;
+## Objetivo acadêmico
 
-•
-Um compromisso sem título.
+O objetivo deste projeto é praticar os seguintes conceitos:
 
-As mensagens de validação são exibidas usando messagebox.
+- Criação de interfaces gráficas com Tkinter;
+- Criação de janelas;
+- Organização de elementos com `Frame`;
+- Utilização de botões e eventos;
+- Criação de funções;
+- Manipulação de listas e dicionários;
+- Validação de dados;
+- Uso de tabelas com `Treeview`;
+- Desenvolvimento de aplicações desktop em Python.
 
-Observação importante
+---
 
-Esta versão armazena os dados apenas enquanto o programa está aberto. Ao fechar o programa, as listas de tarefas e agendamentos são reiniciadas.
+## Autor
 
-A versão mais completa do projeto utiliza o arquivo tarefas.json para manter os dados salvos.
+Desenvolvido por **SEU NOME**.
 
-Objetivo acadêmico
-
-O objetivo do projeto é praticar:
-
-•
-Criação de janelas com Tkinter;
-
-•
-Organização de componentes usando Frame;
-
-•
-Criação de eventos com command;
-
-•
-Uso de funções para cadastrar, concluir e excluir dados;
-
-•
-Manipulação de listas e dicionários em Python;
-
-•
-Construção de uma interface gráfica simples e funcional.
-
+Projeto desenvolvido para fins acadêmicos.
